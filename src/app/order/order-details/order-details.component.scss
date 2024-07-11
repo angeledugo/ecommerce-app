@@ -1,0 +1,26 @@
+
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-button {
+    margin-left: auto;
+    display: block;
+  }
+
+  mat-form-field {
+    margin-left: 8px;
+  }
+
+  .product-detail-container {
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }

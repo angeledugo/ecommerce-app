@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
 
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -54,9 +54,9 @@ export class ProductDetailComponent implements OnInit {
 
   onSubmit(): void {
     if (this.productForm.valid) {
-      const breedId = this.route.snapshot.paramMap.get('id');
-      if (breedId) {
-        this.apiService.updateProduct(breedId, this.productForm.value).subscribe(response => {
+      const productId = this.route.snapshot.paramMap.get('id');
+      if (productId) {
+        this.apiService.updateProduct(productId, this.productForm.value).subscribe(response => {
           console.log(response);
           // Aquí puedes redirigir o mostrar un mensaje de éxito
         });
