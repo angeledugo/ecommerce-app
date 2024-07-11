@@ -1,0 +1,28 @@
+<div>
+    <div class="header">
+        <h1>Detalle del producto</h1>
+        <button mat-raised-button color="primary" class="create-button" [routerLink]="['/products']" >Volver a Productos</button>
+    </div>
+
+      <div class="product-detail-container">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+          <mat-form-field appearance="outline">
+            <mat-label>Descripcion</mat-label>
+            <input matInput formControlName="description" required />
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline">
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="price" required />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Cantidad</mat-label>
+            <input matInput formControlName="quantity" required />
+          </mat-form-field>
+          <div class="actions">
+            <button mat-raised-button color="primary" type="submit">Actualizar</button>
+          </div>
+        </form>
+      </div>
+
+</div>
